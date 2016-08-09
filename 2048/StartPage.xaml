@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="_2048.StartPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_2048"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RenderTransformOrigin="0.506,0.476" Height="768" VerticalAlignment="Bottom">
+        <Rectangle x:Name="TitleBack" Fill="#FF117F1B" Stroke="Black" Opacity="0.9" VerticalAlignment="Top" Height="179" Margin="0,-97,0,0"/>
+        <TextBlock x:Name="LogWordBlock" HorizontalAlignment="Center" Margin="228,286,678,402" TextWrapping="Wrap" Text="UserName" VerticalAlignment="Center" FontSize="24" FontStyle="Italic" FontWeight="Bold" Height="32" Width="118"/>
+        <TextBox x:Name="LogBox" HorizontalAlignment="Center" Height="32" Margin="388,286,417,402" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="219" TextChanged="LogBox_TextChanged"/>
+        <TextBlock x:Name="PassWordBlock" HorizontalAlignment="Center" Margin="228,383,678,308" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="24" FontStyle="Italic" FontWeight="Bold" Height="29" Width="118" RenderTransformOrigin="1.169,0.517">
+            <Run Text="PassWord"/>
+            <LineBreak/>
+            <Run/>
+        </TextBlock>
+        <PasswordBox x:Name="PassWordBox" HorizontalAlignment="Center" Height="32" Margin="388,380,417,308" VerticalAlignment="Center" Width="219" PasswordChanged="PassWordBox_PasswordChanged"/>
+        <AppBarButton x:Name="Sign_In" HorizontalAlignment="Center" Height="64" Icon="Accept" Label="Sign In" Margin="388,467,526,189" VerticalAlignment="Center" Width="110" FontSize="36" Click="appBarButton_Click"/>
+        <AppBarButton x:Name="Sign_Up" HorizontalAlignment="Center" Height="64" Label="Sign Up" Margin="503,467,417,189" VerticalAlignment="Center" Width="104" Icon="Contact" Click="appBarButton1_Click"/>
+        <Hub Header="Game" HorizontalAlignment="Right" Height="523" Margin="0,120,0,0" VerticalAlignment="Top" Width="301" Grid.Column="1">
+            <HubSection Header="Introduce" Width="155" HorizontalAlignment="Right" VerticalAlignment="Top" Height="525">
+                <DataTemplate>
+                    <Grid/>
+                </DataTemplate>
+            </HubSection>
+            <HubSection Header="How to play" Width="140" HorizontalAlignment="Right" VerticalAlignment="Top" Height="521">
+                <DataTemplate>
+                    <Grid/>
+                </DataTemplate>
+            </HubSection>
+        </Hub>
+        <TextBlock x:Name="WrongBlock" HorizontalAlignment="Center" Margin="401,233,419,467" TextWrapping="Wrap" Text="Wrong Password or Username." VerticalAlignment="Center" Foreground="#FFF71212" Visibility="Collapsed"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Height="82" Margin="364,0,405,0" TextWrapping="Wrap" Text="2048" VerticalAlignment="Top" Width="255" FontSize="72" TextAlignment="Center" FontFamily="Pristina"/>
+    </Grid>
+</Page>
